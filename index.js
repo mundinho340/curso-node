@@ -6,16 +6,15 @@ const Sequelize = require('sequelize')
 //config
 //template Engine
     app.engine('handlebars', handlebars({defaultLayout: 'main'}))
-    app.stack('view engine', 'handlebars')
+    app.set('view engine', 'handlebars')
+    
     //conexao com o banco de dados sql
     const sequelize = new Sequelize('teste', 'root','',{
         host: 'localhost',
         dialect:'mysql'
     })
     //Rotas
-    app.get('/cadastro',function(req, res){
-        res.send('Rotas de cadastro de posts')
-    })
+ 
 app.listen(8081, function(){
     console.log('Servidor Rodando na url https://localhost:8081')
 })
