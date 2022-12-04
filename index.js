@@ -12,7 +12,10 @@ const Sequelize = require('sequelize')
         host: 'localhost',
         dialect:'mysql'
     })
-    
+    //Rotas
+    app.get('/cadastro',function(req, res){
+        res.send('Rotas de cadastro de posts')
+    })
 app.listen(8081, function(){
     console.log('Servidor Rodando na url https://localhost:8081')
 })
