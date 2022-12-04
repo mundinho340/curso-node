@@ -5,9 +5,14 @@ const Sequelize = require('sequelize')
 
 //config
 //template Engine
-    app.engine('handlebars', handlebars({defaultLayout: 'main'}))
+const exphbs  = require('express-handlebars');
+var handle = exphbs.create({
+    defaultLayout: 'main'
+    });
+    app.engine('handlebars', handle.engine);
+
     app.set('view engine', 'handlebars')
-    
+
     //conexao com o banco de dados sql
     const sequelize = new Sequelize('teste', 'root','',{
         host: 'localhost',
