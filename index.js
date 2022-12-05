@@ -20,8 +20,8 @@ var handle = exphbs.create({
     })
     //Rotas
     app.get('/cad', function(req, res){
-        res.render('formulario.handlebars')
-    })
+        res.render('formulario')
+        })
 app.listen(8081, function(){
     console.log('Servidor Rodando na url https://localhost:8081')
 })
