@@ -21,5 +21,5 @@ var handle = exphbs.create({
     //Rotas
  
 app.listen(8081, function(){
-    console.log('Servidor Rodando na url https://localhost:8081')
+    //console.log('Servidor Rodando na url https://localhost:8081')
 })
