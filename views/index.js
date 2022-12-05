@@ -19,11 +19,8 @@ var handle = exphbs.create({
         dialect:'mysql'
     })
     //Rotas
-    app.get('/', function(req, res){
-        res.send('pagina vasia')
-    })
     app.get('/cad', function(req, res){
-        res.send('Ola Raimundo o servidor esta rodando ')
+        res.render('formulario.handlebars')
     })
 app.listen(8081, function(){
     console.log('Servidor Rodando na url https://localhost:8081')
