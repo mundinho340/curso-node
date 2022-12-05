@@ -26,7 +26,7 @@ var handle = exphbs.create({
         res.render('formulario')
         })
     app.post('/add', function(req, res){
-        res.send('titulo: '+req.body.titulo+' idade: '+req.body.idade+'çidade: '+req.body.cidade+' conteudo: '+req.body.conteudo )
+        res.send('titulo: '+req.body.titulo+' conteudo: '+req.body.conteudo )
     })
 app.listen(8081, function(){
     console.log('Servidor Rodando na url https://localhost:8081')
