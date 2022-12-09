@@ -36,7 +36,7 @@ var handle = exphbs.create({
             titulo: req.body.titulo,
             conteudo: req.body.conteudo
         }).then(function(){
-            res.send('post criado com sucesso!')
+            res.redirect('/')
         }).catch(function(e){
             res.send('Houve um erro '+e)
         })
