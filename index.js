@@ -3,6 +3,7 @@ const app = express()
 const handlebars = require('express-handlebars')
 const bodyParser = require('body-parser')
 const Sequelize = require('sequelize')
+const Post = require("./modules/Post")
 
 //config
 //template Engine
@@ -26,7 +27,14 @@ var handle = exphbs.create({
         res.render('formulario')
         })
     app.post('/add', function(req, res){
-        res.send('titulo: '+req.body.titulo+' conteudo: '+req.body.conteudo )
+        Post.create({
+            titulo: req.body.titulo,
+            conteudo: req.body.conteudo
+        }).then(function(){
+            res.send('post criado com sucesso!')
+        }).catch(function(e){
+            res.send('Houve um erro '+e)
+        })
     })
 app.listen(8081, function(){
     console.log('Servidor Rodando na url https://localhost:8081')
