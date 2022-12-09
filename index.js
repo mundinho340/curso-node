@@ -23,6 +23,11 @@ var handle = exphbs.create({
         dialect:'mysql'
     })
     //Rotas
+
+    app.get('/', function(req, res){
+        res.render("home")
+    })
+
     app.get('/cad', function(req, res){
         res.render('formulario')
         })
