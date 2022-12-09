@@ -13,7 +13,11 @@ const sequelize = new Sequelize('teste', 'root', '',{
     dialect: 'mysql'
 })
 app.get('/cad', function(req, res){
-    res.send('Faca ja o cadastro')
+    res.render("formulario")
+})
+app.post('/', function(req, res){
+    res.send("titulo: "+req.body.titulo)
+
 })
 
 app.listen(8080, function(){
