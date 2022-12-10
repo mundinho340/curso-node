@@ -25,7 +25,7 @@ var handle = exphbs.create({
     //Rotas
 
     app.get('/', function(req, res){
-        Post.findAll().then(function(posts){
+        Post.findAll({}).then(function(posts){
             res.render('home',{posts: posts})
             
         })
