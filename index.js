@@ -26,7 +26,7 @@ var handle = exphbs.create({
 
     app.get('/', function(req, res){
         Post.findAll().then(function(posts){
-            res.render("home",{nome:"Raimundo", idade:"19 anos"})
+            res.render("home",{Post: posts})
             
         })
     })

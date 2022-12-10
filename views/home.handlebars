@@ -8,7 +8,19 @@
 </head>
 <body>
     <h1>Lista de postagens</h1>
-    {{nome}}
-    {{idade}}
+    
+    {{#each posts}}
+
+    <small>{{dataValues.createdAt}}</small>
+
+    <h1>{{dataValues.titulo}}</h1>
+
+    <p>{{dataValues.conteudo}}</p>
+
+    <a href="/deletar"><button>Deletar</button></a>
+
+    <hr>
+
+{{/each}}
 </body>
 </html>
