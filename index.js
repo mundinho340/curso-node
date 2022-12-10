@@ -25,7 +25,10 @@ var handle = exphbs.create({
     //Rotas
 
     app.get('/', function(req, res){
-        res.render("home")
+        Post.findAll().then(function(posts){
+            res.render("home",{nome:"Raimundo", idade:"19 anos"})
+            
+        })
     })
 
     app.get('/cad', function(req, res){
