@@ -1,8 +1,20 @@
 const mongoose = require("mongoose")
 
 
-mongoose.connect("mongodb://localhost/aprendendo").then(()=> {
-    console.log("MongoDB conectado ...").cacth((e)=>{
-        console.log("Houve um erro ao se connectar ao Mongo "+e)
-    })
+mongoose.connect('mongodb://localhost/learnmongodb', {useNewUrlParser: true})
+
+
+
+const dab = mongoose.connection
+
+
+
+dab.on('error', console.error.bind(console, 'Erro de conecção: '))
+
+
+
+dab.once('open',() => {
+
+    console.log('Conectado com sucesso!')
 })
+
