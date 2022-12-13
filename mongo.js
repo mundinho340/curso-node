@@ -1,20 +1,10 @@
 const mongoose = require("mongoose")
+//const mongoose = require('mongoose');
 
+mongoose.connect('mongodb://localhost:27017/test');
 
-mongoose.connect('mongodb://localhost/learnmongodb', {useNewUrlParser: true})
+const Cat = mongoose.model('Cat', { name: String });
 
-
-
-const dab = mongoose.connection
-
-
-
-dab.on('error', console.error.bind(console, 'Erro de conecção: '))
-
-
-
-dab.once('open',() => {
-
-    console.log('Conectado com sucesso!')
-})
+const kitty = new Cat({ name: 'Zildjian' });
+kitty.save().then(() => console.log('meow'));
 
