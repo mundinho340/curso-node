@@ -1,10 +1,18 @@
 const mongoose = require("mongoose")
 //const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost:27017/test');
+const database ='mongodb://localhost:27017/ussd';
 
-const Cat = mongoose.model('Cat', { name: String });
+mongoose.set("strictQuery",true)
+mongoose.connect(database,{
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+}).then(()=>{
+    console.log('connectado ao mongodb')
 
-const kitty = new Cat({ name: 'Zildjian' });
-kitty.save().then(() => console.log('meow'));
+}).catch((e)=> {
+    console.log('Nao foi possivel se conectar houve um erro de '+e)
+})
+
+
 
