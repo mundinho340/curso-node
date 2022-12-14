@@ -4,10 +4,7 @@ const mongoose = require("mongoose")
 const database ='mongodb://localhost:27017/ussd';
 
 mongoose.set("strictQuery",true)
-mongoose.connect(database,{
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-}).then(()=>{
+mongoose.connect(database).then(()=>{
     console.log('connectado ao mongodb')
 
 }).catch((e)=> {
