@@ -8,4 +8,22 @@ mongoose.connect('mongodb://127.0.0.1:27017/aprendendo').then(()=> {
     console.log('Servidor nao conectado por '+e)
 })
 
+const UsuariosSchema = mongoose.Schema({
+    name: {
+        type: String,
+        require: true
+    },
+
+    sobreNome:{
+        type: String,
+        require: true
+    },
+    email:{
+        type: String
+    },
+    idade:{
+        type: Number,
+        require: true
+    }
+})
 
