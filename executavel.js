@@ -8,6 +8,4 @@ mongoose.connect("mongodb://127.0.0.1:27017/bancoTeste").then(()=>{
 
     console.log("Houve um erro ao se conectar ao banco:" +err)
 
-
-
 })
