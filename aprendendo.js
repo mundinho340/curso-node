@@ -44,4 +44,9 @@ const novoUsuario = mongoose.model("usuarios")
         email: 'raimundo@gmail',
         idade: 19,
         pais: 'mozambique'
+    }).save().then(()=> {
+        console.log("dados inseridos com sucesso")
+    }).catch((e)=> {
+        console.log("houve um erro com "+e)
     })
+
