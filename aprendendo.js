@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 const { NUMBER } = require('sequelize')
-
+0
 mongoose.set('strictQuery', true)
 
 mongoose.connect('mongodb://127.0.0.1:27017/aprendendo').then(()=> {

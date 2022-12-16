@@ -16,10 +16,11 @@ app.get('/cad', function(req, res){
     res.render("formulario")
 })
 app.post('/', function(req, res){
-    res.send("titulo: "+req.body.titulo)
+    res.send("titulo: "+req.body.titulo+" post: "+req.body.conteudo)
 
 })
 
 app.listen(8080, function(){
     console.log('Esta rodando na porta 8080 ->>>>>>>>>>>>>')
 })
+
