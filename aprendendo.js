@@ -33,3 +33,5 @@ const usuarioSchema = mongoose.Schema({
      }
 })
 
+mongoose.model('usuarios', usuarioSchema)
+
