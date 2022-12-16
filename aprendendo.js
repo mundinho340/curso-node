@@ -25,7 +25,7 @@ const usuarioSchema = mongoose.Schema({
         require: true
     },
      idade:{
-        type: NUMBER,
+        type: Number,
          require: true
      },
      pais:{
