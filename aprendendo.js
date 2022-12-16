@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const { NUMBER } = require('sequelize')
 
 mongoose.set('strictQuery', true)
 
@@ -16,12 +17,19 @@ const usuarioSchema = mongoose.Schema({
     ,
     sobrenome:{
         type: String,
-        require: true
+        require: true  
     },
     email:{
         type: String,
         require: true
     },
-    
+     idade:{
+        type: NUMBER,
+         require: true
+     },
+     pais:{
+        type: String,
+        require: true
+     }
 })
 
