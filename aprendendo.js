@@ -36,15 +36,12 @@ const usuarioSchema = mongoose.Schema({
 //indicando a collection
 mongoose.model('usuarios', usuarioSchema)
 
-new usuarioSchema({
-    nome: "Krypthon",
-    sobrenome: "Rymond",
-    email: "email@gmail.com",
-    idade: 19,
-    pais: "mocambique"
-}).save().then(()=>{
-    console.log("Dado salvado com sucesso ...")
-}).catch((e)=> {
-    console.log("houve um erro de "+e)
-})
+const novoUsuario = mongoose.model("usuarios")
 
+    new novoUsuario({
+        nome: 'krypthon',
+        sobrenome: 'Ray',
+        email: 'raimundo@gmail',
+        idade: 19,
+        pais: 'mozambique'
+    })
